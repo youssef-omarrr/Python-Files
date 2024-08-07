@@ -14,7 +14,7 @@ def add_data(): #fn to add data to the original list
         if (data == 'done'):
             break
         students.append(data)
-        print("----------------------------------")
+        print("-----------------------------------")
 
 def split (): #a funcion that splits the data to individual arrays
     words = []
