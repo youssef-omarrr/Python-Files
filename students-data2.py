@@ -12,7 +12,7 @@ def add_data(): #func to add data to txt file
             break
         data.write(x+'\n')
         print("Data added successfully.")
-        print("------------------------------------------------")
+        print("--------------------------------------------------")
 
 def print_data(): #prints all data
     data = open("students.txt", 'r')
