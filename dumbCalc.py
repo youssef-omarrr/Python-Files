@@ -1,6 +1,6 @@
 from tkinter import *
 
-###############################  FUNCTIONS  ###################################
+###############################  FUNCTIONS  ####################################
 def write(num):
     global ans1, ans2, op, txt, flag, cur1
 
