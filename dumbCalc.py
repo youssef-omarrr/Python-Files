@@ -96,11 +96,11 @@ def clear(): #clears all data by reseting them to their intial values and makes 
 ################################  MAIN  ###################################
 wind = Tk()
 wind.title("Dumb calculator")
-wind.geometry('365x490') #display ratio
-wind.configure(bg = 'black')
+wind.geometry('365x570') #display ratio
+wind.configure(bg = '#EEEEEE'.lower())
 
-txt = Label(wind, text = '', font = ("bold",50), bg = 'black', fg = 'white') #our screen that will display the output
-txt.grid(row = 0, columnspan= 7) 
+txt = Label(wind, text = '', height= 2,font = ("bold",50), bg = '#EEEEEE'.lower(), fg = 'black') #our screen that will display the output
+txt.grid(row = 0,rowspan=2, columnspan= 7) 
 
 ans1 = StringVar(wind, 'y') #random initial values just to know if it they changed or not
 ans2 = StringVar(wind, 'y')
@@ -133,48 +133,48 @@ poww = Button(wind, text = '^', height= 5, width = 7, command= lambda:write('^')
 
 
 ####################  putting the buttons in their grid  ###################################
-b1.grid(row = 3, column = 0, sticky = 'nsew')
-b2.grid(row = 3, column = 1, sticky = 'nsew')
-b3.grid(row = 3, column = 2, sticky = 'nsew')
-b4.grid(row = 2, column = 0, sticky = 'nsew')
-b5.grid(row = 2, column = 1, sticky = 'nsew')
-b6.grid(row = 2, column = 2, sticky = 'nsew')
-b7.grid(row = 1, column = 0, sticky = 'nsew')
-b8.grid(row = 1, column = 1, sticky = 'nsew')
-b9.grid(row = 1, column = 2, sticky = 'nsew')
-b0.grid(row = 4, column = 0, sticky = 'nsew')
-bdot.grid(row = 4, column = 1, sticky = 'nsew')
+b1.grid    (row = 4, column = 0, sticky = 'nsew')
+b2.grid    (row = 4, column = 1, sticky = 'nsew')
+b3.grid    (row = 4, column = 2, sticky = 'nsew')
+b4.grid    (row = 3, column = 0, sticky = 'nsew')
+b5.grid    (row = 3, column = 1, sticky = 'nsew')
+b6.grid    (row = 3, column = 2, sticky = 'nsew')
+b7.grid    (row = 2, column = 0, sticky = 'nsew')
+b8.grid    (row = 2, column = 1, sticky = 'nsew')
+b9.grid    (row = 2, column = 2, sticky = 'nsew')
+b0.grid    (row = 5, column = 0, sticky = 'nsew')
+bdot.grid  (row = 5, column = 1, sticky = 'nsew')
 
-plus.grid(row = 3, column = 3, sticky = 'nsew')
-minus.grid(row = 3, column = 4, sticky = 'nsew')
-times.grid(row = 2, column = 3, sticky = 'nsew')
-divide.grid(row = 2, column = 4, sticky = 'nsew')
+plus.grid  (row = 4, column = 3, sticky = 'nsew')
+minus.grid (row = 4, column = 4, sticky = 'nsew')
+times.grid (row = 3, column = 3, sticky = 'nsew')
+divide.grid(row = 3, column = 4, sticky = 'nsew')
 
-equal.grid(row = 4, column = 2,columnspan=3, sticky = 'nsew')
-ac.grid(row = 1, column = 4, sticky = 'nsew')
-poww.grid(row = 1, column = 3, sticky = 'nsew')
+equal.grid (row = 5, column = 2,columnspan=3, sticky = 'nsew')
+ac.grid    (row = 2, column = 4, sticky = 'nsew')
+poww.grid  (row = 2, column = 3, sticky = 'nsew')
 
 ##################  changing the color of the buttons  ###################################
-b1.configure(bg = '#6EACDA'.lower(),font = ("bold"))
-b2.configure(bg = '#6EACDA'.lower(),font = ("bold"))
-b3.configure(bg = '#6EACDA'.lower(),font = ("bold"))
-b4.configure(bg = '#6EACDA'.lower(),font = ("bold"))
-b5.configure(bg = '#6EACDA'.lower(),font = ("bold"))
-b6.configure(bg = '#6EACDA'.lower(),font = ("bold"))
-b7.configure(bg = '#6EACDA'.lower(),font = ("bold"))
-b8.configure(bg = '#6EACDA'.lower(),font = ("bold"))
-b9.configure(bg = '#6EACDA'.lower(),font = ("bold"))
-b0.configure(bg = '#6EACDA'.lower(),font = ("bold"))
-bdot.configure(bg = '#6EACDA'.lower(),font = ("bold"))
+b1.configure     (bg = '#508C9B'.lower(),font = ("bold"))
+b2.configure     (bg = '#508C9B'.lower(),font = ("bold"))
+b3.configure     (bg = '#508C9B'.lower(),font = ("bold"))
+b4.configure     (bg = '#508C9B'.lower(),font = ("bold"))
+b5.configure     (bg = '#508C9B'.lower(),font = ("bold"))
+b6.configure     (bg = '#508C9B'.lower(),font = ("bold"))
+b7.configure     (bg = '#508C9B'.lower(),font = ("bold"))
+b8.configure     (bg = '#508C9B'.lower(),font = ("bold"))
+b9.configure     (bg = '#508C9B'.lower(),font = ("bold"))
+b0.configure     (bg = '#508C9B'.lower(),font = ("bold"))
+bdot.configure   (bg = '#508C9B'.lower(),font = ("bold"))
 
-plus.configure(bg = '#03346E'.lower(), fg='white')
-minus.configure(bg = '#03346E'.lower(), fg='white')
-times.configure(bg = '#03346E'.lower(), fg='white')
-divide.configure(bg = '#03346E'.lower(), fg='white')
+plus.configure   (bg = '#134B70'.lower(), fg='white')
+minus.configure  (bg = '#134B70'.lower(), fg='white')
+times.configure  (bg = '#134B70'.lower(), fg='white')
+divide.configure (bg = '#134B70'.lower(), fg='white')
 
-equal.configure(bg = '#E2E2B6'.lower())
-ac.configure(bg = '#021526', fg='white')
-poww.configure(bg = '#03346E'.lower(), fg='white')
+equal.configure  (bg = '#E2E2B6'.lower())
+ac.configure     (bg = '#201E43', fg='white')
+poww.configure   (bg = '#134B70'.lower(), fg='white')
 
 #we could have made the grid and changed the color in the same line we intialized the butons at
 #but this is more organized if we wanted to add any extra buttons
